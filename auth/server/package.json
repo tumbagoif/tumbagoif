@@ -9,7 +9,7 @@
     "start": "node dist/index.js",
     "test": "vitest run --passWithNoTests",
     "auth:migrate": "npm run db:migrate && npm run auth:migrate:core",
-    "auth:migrate:core": "npx auth@1.7.4 migrate",
+    "auth:migrate:core": "npx @better-auth/cli@1.7.4 migrate",
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push"
