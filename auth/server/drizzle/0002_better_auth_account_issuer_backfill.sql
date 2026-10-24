@@ -18,7 +18,4 @@ LEFT JOIN "users" AS u
   ON u.auth_user_id = bu.id
 WHERE bu.id = a."userId";
 
-ALTER TABLE "account" ALTER COLUMN "issuer" SET NOT NULL;
-
-CREATE UNIQUE INDEX IF NOT EXISTS "account_issuer_accountid_key"
-  ON "account" ("issuer", "accountId");
+-- issuer is intentionally left nullable and non-unique; see 0003_better_auth_account_issuer_relax.sql
