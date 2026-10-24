@@ -8,7 +8,7 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "preview": "vite preview",
-    "api:generate": "npx nswag openapi2tsclient /input:http://localhost:3000/api/auth/open-api/generate-schema /output:src/lib/auth-api-client.ts /template:Fetch /className:AuthApiClient /operationGenerationMode:SingleClientFromOperationId /generateClientInterfaces:true /useAbortSignal:true"
+    "api:generate": "npx nswag openapi2tsclient /input:http://localhost:3000/api/auth/open-api/generate-schema /output:src/lib/auth-api-client.generated.ts /template:Fetch /className:AuthApiClient /operationGenerationMode:SingleClientFromOperationId /generateClientInterfaces:true /useAbortSignal:true"
   },
   "dependencies": {
     "better-auth": "1.7.4",
